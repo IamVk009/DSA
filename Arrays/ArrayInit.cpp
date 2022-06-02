@@ -1,23 +1,28 @@
 #include<iostream>
 using namespace std;
 
+// Function to print arrays.
+void printArray(int aray[], int size){
+   for(int i = 0; i < size; i++){
+       cout << aray[i] << " ";
+   }
+}
+
 int main(){
 
     // Declare and observe the default values.
     int arr[5];
-    for(int  i = 0; i < 5; i++){
-        cout << arr[i] << " ";
-    }
+    printArray(arr,5);
     cout<< endl;
 
     // Declaration and Initialisation on same line.
     int numbers[5] = {1,2,3,4,5};
+    printArray(numbers, 5);
+    cout << endl;
 
     // Initialise with Zero.
     int zero[5] = {0};
-    for(int  i = 0; i < 5; i++){
-        cout << zero[i] << " ";
-    }
+    printArray(zero,5);
     cout << endl;
 
     // Initialise with any Value.
@@ -25,7 +30,5 @@ int main(){
     
     int values[10];
     fill_n(values, 10, -1);
-    for(int  i = 0; i < 10; i++){
-        cout << values[i] << " ";
-    }
+    printArray(values, 10);
 }
